@@ -1,0 +1,31 @@
+tags:
+  - Employees
+summary: Update a specific employee by id
+description: Updates an employee's information based on their ID.
+parameters:
+  - name: employee_id
+    in: path
+    required: true
+    type: integer
+  - in: body
+    name: body
+    description: Updated employee object
+    required: true
+    schema:
+      type: object
+      properties:
+        name:
+          type: string
+        email:
+          type: string
+        phonenumber:
+          type: string
+        role:
+          type: string
+        schedule:
+          type: string
+responses:
+  200:
+    description: Updated employee object
+  404:
+    description: "Employee not found"

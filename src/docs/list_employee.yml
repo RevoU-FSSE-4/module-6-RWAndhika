@@ -1,0 +1,26 @@
+tags:
+  - Employees
+summary: Get all employees
+description: Returns a list of all employees.
+responses:
+  200:
+    description: A list of employees
+    schema:
+      type: array
+      items:
+        type: object
+        properties:
+          id:
+            type: integer
+          name:
+            type: string
+          email:
+            type: string
+          phonenumber:
+            type: string
+          role:
+            type: string
+          schedule:
+            type: string
+  404:
+    description: employee list is empty

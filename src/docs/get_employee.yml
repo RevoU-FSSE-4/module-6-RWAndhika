@@ -1,0 +1,14 @@
+tags:
+  - Employees
+summary: Get a specific employee by id
+description: Returns a single employee based on their ID.
+parameters:
+  - name: employee_id
+    in: path
+    required: true
+    type: integer
+responses:
+  200:
+    description: A single employee
+  404:
+    description: "Employee not found"
