@@ -1,0 +1,14 @@
+tags:
+  - Animals
+summary: Get a specific animal by id
+description: Returns a single animal based on their ID.
+parameters:
+  - name: animal_id
+    in: path
+    required: true
+    type: integer
+responses:
+  200:
+    description: A single animal
+  404:
+    description: Employee not found

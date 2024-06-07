@@ -9,6 +9,6 @@ parameters:
     type: integer
 responses:
   200:
-    description: "Employee deleted succesfully"
+    description: Employee deleted succesfully
   404:
-    description: "Employee not found"
+    description: Employee not found

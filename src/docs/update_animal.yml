@@ -1,0 +1,29 @@
+tags:
+  - Animals
+summary: Update a specific animal by id
+description: Updates an animal's information based on their ID.
+parameters:
+  - name: animal_id
+    in: path
+    required: true
+    type: integer
+  - in: body
+    name: body
+    description: Updated animal object
+    required: true
+    schema:
+      type: object
+      properties:
+        species:
+          type: string
+        age:
+          type: integer
+        gender:
+          type: string
+        special_requirements:
+          type: string
+responses:
+  200:
+    description: Updated animal object
+  404:
+    description: Animal not found

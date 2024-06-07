@@ -1,0 +1,25 @@
+tags:
+  - Animals
+summary: Register a new animal
+description: Creates a new animal and adds them to the list.
+parameters:
+  - name: body
+    in: body
+    description: Animal object that needs to be added
+    required: true
+    schema:
+      type: object
+      properties:
+        species:
+          type: string
+        age:
+          type: integer
+        gender:
+          type: string
+        special_requirements:
+          type: string
+responses:
+  201:
+    description: animal created
+  400:
+    description: All fields are required

@@ -28,4 +28,4 @@ responses:
   200:
     description: Updated employee object
   404:
-    description: "Employee not found"
+    description: Employee not found

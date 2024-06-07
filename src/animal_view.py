@@ -5,6 +5,7 @@ from flasgger import swag_from
 animals_blueprint = Blueprint("animals", __name__)
 
 @animals_blueprint.route("/animals", methods=["POST"])
+@swag_from("docs/register_animal.yml")
 def register_animals():
     species = request.json.get("species")
     age = request.json.get("age")
@@ -26,10 +27,14 @@ def register_animals():
     return jsonify({"message": "animal created"}), 201
 
 @animals_blueprint.route("/animals", methods=["GET"])
+@swag_from("docs/list_animal.yml")
 def get_animals():
+    if len(animals) == 0:
+        return jsonify({"error": "animal list is empty!"}), 404
     return jsonify(animals), 200
 
 @animals_blueprint.route("/animals/<int:animal_id>", methods=["GET"])
+@swag_from("docs/get_animal.yml")
 def get_animal(animal_id):
     for animal in animals:
         if animal.get("id") == animal_id:
@@ -38,6 +43,7 @@ def get_animal(animal_id):
     return jsonify({"error": "animal not found!"}), 400
 
 @animals_blueprint.route("/animals/<int:animal_id>", methods=["PUT"])
+@swag_from("docs/update_animal.yml")
 def update_animal(animal_id):
     for animal in animals:
         if animal.get("id") == animal_id:
@@ -50,6 +56,7 @@ def update_animal(animal_id):
     return jsonify({"error": "animal not found!"}), 400
 
 @animals_blueprint.route("/animals/<int:animal_id>", methods=["DELETE"])
+@swag_from("docs/delete_animal.yml")
 def delete_animal(animal_id):
     for animal in animals:
         if animal.get("id") == animal_id:

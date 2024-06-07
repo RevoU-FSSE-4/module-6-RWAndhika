@@ -1,0 +1,24 @@
+tags:
+  - Animals
+summary: Get all animals
+description: Returns a list of all animals.
+responses:
+  200:
+    description: A list of animals
+    schema:
+      type: array
+      items:
+        type: object
+        properties:
+          id:
+            type: integer
+          species:
+            type: string
+          age:
+            type: integer
+          gender:
+            type: string
+          special_requirements:
+            type: string
+  404:
+    description: animal list is empty

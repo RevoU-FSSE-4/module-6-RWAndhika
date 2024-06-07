@@ -3,25 +3,25 @@ tags:
 summary: Register a new employee
 description: Creates a new employee and adds them to the list.
 parameters:
-  - name: "body"
-    in: "body"
-    description: "Employee object that needs to be added"
+  - name: body
+    in: body
+    description: Employee object that needs to be added
     required: true
     schema:
-      type: "object"
+      type: object
       properties:
         name:
-          type: "string"
+          type: string
         email:
-          type: "string"
+          type: string
         phonenumber:
-          type: "string"
+          type: string
         role:
-          type: "string"
+          type: string
         schedule:
-          type: "string"
+          type: string
 responses:
   201:
-    description: "employee created"
+    description: employee created
   400:
-    description: "All fields are required"
+    description: All fields are required
