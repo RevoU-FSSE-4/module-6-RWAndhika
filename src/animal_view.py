@@ -12,7 +12,7 @@ def register_animals():
     gender = request.json.get("gender")
     special_requirements = request.json.get("special_requirements")
 
-    if not species or not age or not gender or not special_requirements:
+    if not species or age < 0 or not gender or not special_requirements:
         return jsonify({"message": "All field are required"}), 400
     
     new_animal = {
