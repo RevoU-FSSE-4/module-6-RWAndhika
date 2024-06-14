@@ -27,5 +27,7 @@ parameters:
 responses:
   200:
     description: Updated employee object
+  400:
+    description: All fields are required
   404:
     description: Employee not found

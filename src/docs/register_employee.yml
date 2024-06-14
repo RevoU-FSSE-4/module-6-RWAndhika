@@ -22,6 +22,6 @@ parameters:
           type: string
 responses:
   201:
-    description: employee created
+    description: Employee created successfully
   400:
     description: All fields are required

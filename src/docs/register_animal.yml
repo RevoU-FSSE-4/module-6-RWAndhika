@@ -20,6 +20,6 @@ parameters:
           type: string
 responses:
   201:
-    description: animal created
+    description: Animal successfully created
   400:
     description: All fields are required

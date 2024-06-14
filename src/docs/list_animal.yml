@@ -21,4 +21,4 @@ responses:
           special_requirements:
             type: string
   404:
-    description: animal list is empty
+    description: Animal list is empty

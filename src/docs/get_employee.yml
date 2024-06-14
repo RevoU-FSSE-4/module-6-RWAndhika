@@ -9,6 +9,15 @@ parameters:
     type: integer
 responses:
   200:
-    description: A single employee
+    description: Employee found
+    content:
+      application/json:
+        example:
+          id: 1
+          name: Jane Doe
+          email: Janedoe@example.com
+          phonenumber: "0819123121"
+          role: Feeder
+          schedule: Friday
   404:
     description: Employee not found

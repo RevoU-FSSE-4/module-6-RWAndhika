@@ -23,4 +23,4 @@ responses:
           schedule:
             type: string
   404:
-    description: employee list is empty
+    description: Employee list is empty

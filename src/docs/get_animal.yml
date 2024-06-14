@@ -9,6 +9,14 @@ parameters:
     type: integer
 responses:
   200:
-    description: A single animal
+    description: Animal found
+    content:
+      application/json:
+        example:
+          id: 1
+          species: Cat
+          age: 3
+          gender: Female
+          special_requirements: None
   404:
-    description: Employee not found
+    description: Animal not found
