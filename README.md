@@ -1,4 +1,4 @@
-# FSSE Module 6 -Checkpoint#1 - Raden Wisnu Andhika Pranidhia
+# FSSE Module 6 Assignment - Raden Wisnu Andhika Pranidhia
 
 This assignment is to make an API using flask and then containerize with docker and deploy it to google cloud.
 
