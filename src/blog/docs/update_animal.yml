@@ -3,9 +3,10 @@ tags:
 summary: Update a specific animal by id
 description: Updates an animal's information based on their ID.
 parameters:
-  - name: animal_id
+  - name: id
     in: path
     required: true
+    description: The animal ID
     type: integer
   - in: body
     name: body

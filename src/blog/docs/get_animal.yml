@@ -3,9 +3,10 @@ tags:
 summary: Get a specific animal by id
 description: Returns a single animal based on their ID.
 parameters:
-  - name: animal_id
+  - name: id
     in: path
     required: true
+    description: The animal ID
     type: integer
 responses:
   200:

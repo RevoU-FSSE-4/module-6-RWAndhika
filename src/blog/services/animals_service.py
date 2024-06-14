@@ -13,7 +13,7 @@ class AnimalsService:
         if not species or not isinstance(species, str):
             raise ValueError("Animal's species must be a string")
         
-        if age <= 0 or not isinstance(age, int):
+        if age < 0 or not isinstance(age, int):
             raise ValueError("Animal's age must be an integer and a whole number ")
         
         if not gender or not isinstance(gender, str):

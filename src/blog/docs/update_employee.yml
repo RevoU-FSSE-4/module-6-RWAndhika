@@ -3,9 +3,10 @@ tags:
 summary: Update a specific employee by id
 description: Updates an employee's information based on their ID.
 parameters:
-  - name: employee_id
+  - name: id
     in: path
     required: true
+    description: The employee ID
     type: integer
   - in: body
     name: body

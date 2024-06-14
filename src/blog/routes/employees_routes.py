@@ -41,6 +41,8 @@ def delete_employee(id):
 @swag_from("../docs/list_employee.yml")
 def get_all():
     employee = service.get_all()
+    if len(employee) == 0:
+        return {"error": "Employee list is empty"}, 404
     return employee
 
 @employees_blueprint.route("/employees/<string:id>", methods=["PUT"])

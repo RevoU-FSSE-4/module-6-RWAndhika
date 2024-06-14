@@ -3,9 +3,10 @@ tags:
 summary: Delete a specific employee by id
 description: Deletes an employee based on their ID.
 parameters:
-  - name: employee_id
+  - name: id
     in: path
     required: true
+    description: The employee ID
     type: integer
 responses:
   200:

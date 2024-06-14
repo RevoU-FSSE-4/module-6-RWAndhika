@@ -3,9 +3,10 @@ tags:
 summary: Delete a specific animal by id
 description: Deletes an animal based on their ID.
 parameters:
-  - name: animal_id
+  - name: id
     in: path
     required: true
+    description: The animal ID
     type: integer
 responses:
   200:

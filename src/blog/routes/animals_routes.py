@@ -41,6 +41,9 @@ def delete_animal(id):
 @swag_from("../docs/list_animal.yml")
 def get_all():
     animal = service.get_all()
+    if len(animal) == 0:
+        return {"error": "Animal list is empty"}, 404
+    
     return animal
 
 @animals_blueprint.route("/animals/<string:id>", methods=["PUT"])
